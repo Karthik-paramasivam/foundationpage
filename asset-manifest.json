@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/foundationpage/static/css/main.5458430e.css",
+    "main.js": "/foundationpage/static/js/main.465285ed.js",
+    "static/js/488.7e101b22.chunk.js": "/foundationpage/static/js/488.7e101b22.chunk.js",
+    "static/media/CareerOpportunities.jpg": "/foundationpage/static/media/CareerOpportunities.20e1c936274e4921eeb8.jpg",
+    "static/media/EntryQualificationImage.jpg": "/foundationpage/static/media/EntryQualificationImage.a380963d329eeab67de9.jpg",
+    "static/media/CourseContent.jpg": "/foundationpage/static/media/CourseContent.a77bc173d426a7b17e84.jpg",
+    "static/media/AboutImage.jpg": "/foundationpage/static/media/AboutImage.e5feba3e8455c4931073.jpg",
+    "static/media/Backgroundimage.jpeg": "/foundationpage/static/media/Backgroundimage.ff3b1f531b19efd58026.jpeg",
+    "static/media/LearnerImage.jpg": "/foundationpage/static/media/LearnerImage.3dbaa28b7f340364a9e7.jpg",
+    "static/media/Logo2.png": "/foundationpage/static/media/Logo2.731dfe8fe8f8ba5e024e.png",
+    "static/media/travel-and-tourism.png": "/foundationpage/static/media/travel-and-tourism.1705dfa7d69fdd7ee233.png",
+    "static/media/passport.png": "/foundationpage/static/media/passport.f58a029f73bd50d40b47.png",
+    "static/media/travel.png": "/foundationpage/static/media/travel.0fffc2dceb4d46af58b7.png",
+    "static/media/globe.png": "/foundationpage/static/media/globe.a8bad4443657596700c2.png",
+    "static/media/travel-service.png": "/foundationpage/static/media/travel-service.bbe34f071824d300f35e.png",
+    "static/media/visa.png": "/foundationpage/static/media/visa.33a462fae54708bf4577.png",
+    "static/media/WingsWay logo.png": "/foundationpage/static/media/WingsWay logo.2d38dac4d59df4056f8d.png",
+    "static/media/Footerlogo.png": "/foundationpage/static/media/Footerlogo.095b840dc5c1b28b4e8b.png",
+    "static/media/logo.svg": "/foundationpage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/slick.svg": "/foundationpage/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/foundationpage/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/foundationpage/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/foundationpage/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/foundationpage/index.html",
+    "main.5458430e.css.map": "/foundationpage/static/css/main.5458430e.css.map",
+    "main.465285ed.js.map": "/foundationpage/static/js/main.465285ed.js.map",
+    "488.7e101b22.chunk.js.map": "/foundationpage/static/js/488.7e101b22.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5458430e.css",
+    "static/js/main.465285ed.js"
+  ]
+}
