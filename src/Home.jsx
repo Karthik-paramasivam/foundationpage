@@ -283,7 +283,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   cssEase: "linear",
   autoplaySpeed: 4000,
   // initialSlide: 0,
@@ -1345,7 +1345,7 @@ const settings = {
               <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-4 mt-0 ms-1 me-1 testimonialresponsive-div">
                 <h3 className="text-center mt-5 ">Sidonie la Fleur </h3>
                 <p className=" mt-3 text-center">
-                I had the best educational experience from here and I can boast that I now Have WINGS to fly higher. I love y’all Ma’am Sheetal, Miss Tina and all the School Admins.
+                I had the best educational experience from here and I can boast that I now Have WINGS to fly higher. 🥰🥰🥰 I love y’all Ma’am Sheetal, Miss Tina and all the School Admins.
                 </p>
               </div>
             </div>
