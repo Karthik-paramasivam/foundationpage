@@ -216,31 +216,36 @@ button.Contactbutton:hover {
 
 
 
+/* Base styles for smallest screens */
 .testimonialresponsive-div {
-  width: 95%;
-  height: 250px; /* Default height for large devices */
+  height: 600px; /* Default height for the smallest devices */
+  
 }
 
-@media (max-width: 768px) {
+/* Apply styles for devices wider than 320px */
+@media (min-width: 321px) {
   .testimonialresponsive-div {
-    height: 400px;
+    height: 520px;
   }
 }
 
-@media (max-width: 425px) {
+/* Apply styles for devices wider than 375px */
+@media (min-width: 376px) {
   .testimonialresponsive-div {
-    height: 400px  /* Ensure it overrides other styles */
+    height: 480px;
   }
 }
 
-@media (max-width: 375px) {
+/* Apply styles for devices wider than 425px */
+@media (min-width: 426px) {
   .testimonialresponsive-div {
-    height: 520px;  /* Ensure it overrides other styles */
+    height: 400px; /* Adjusted for larger devices */
   }
 }
 
-@media (max-width: 320px) {
+/* Apply styles for devices wider than 768px */
+@media (min-width: 769px) {
   .testimonialresponsive-div {
-    height: 600px !important; /* Ensure it overrides other styles */
+    height: 320px; /* Height for larger devices */
   }
 }

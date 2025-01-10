@@ -56,6 +56,7 @@ export default function Home() {
   });
 
   const [hasViewedSlide, setHasViewedSlide] = useState({
+    zeroElement: false,
     myElement: false,
     secondElement: false,
     thirdElement: false,
@@ -63,6 +64,15 @@ export default function Home() {
     fifthElement: false,
     sixthElement: false,
     seventhElement: false,
+  });
+
+  const { ref: myRef0, inView: zeroElementIsVisible } = useInView({
+    triggerOnce: true,
+    onChange: (inView) => {
+      if (inView && !hasViewedSlide.zeroElement) {
+        setHasViewedSlide((prev) => ({ ...prev, zeroElement: true }));
+      }
+    },
   });
 
   const { ref: myRef1, inView: myElementIsVisible } = useInView({
@@ -273,7 +283,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   cssEase: "linear",
   autoplaySpeed: 4000,
   // initialSlide: 0,
@@ -503,14 +513,14 @@ const settings = {
                 >
                   {/* Logo with animation */}
                   <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{
-                      duration: 0.8,
-                      type: "spring",
-                      stiffness: 100,
-                    }}
-                  >
+                ref={myRef0}
+                initial={{ scale: 0 }}
+                animate={{ scale: hasViewedSlide.zeroElement ? 1 : 0 }}
+                transition={{
+                  duration: 0.8,
+                  type: "spring",
+                  stiffness: 100,
+                    }}>
                     <img
                       src={Logo2}
                       alt="IATA Logo"
@@ -688,6 +698,14 @@ const settings = {
                 </div>
               </div>
             </div>
+            </div>
+
+            <div
+            className={`row  slide-in-left  ${
+              hasViewedSlide.secondElement ? "animate-slide-in" : ""
+            }`}
+            ref={myRef2}
+          >
             <div className="col-12 d-flex justify-content-evenly  flex-wrap mt-lg-3 mt-xl-3 mt-xxl-4 ">
               <div className="col-12 col-lg-3 card border border-light shadow-lg hover-scale2 mt-2 mt-lg-5 p-sm-1">
                 <img
@@ -735,9 +753,9 @@ const settings = {
         <div className="container mt-5" id="course">
           <div
             className={`row shadow rounded-4 slide-in-left p-3  ${
-              hasViewedSlide.secondElement ? "animate-enquire" : ""
+              hasViewedSlide.thirdElement ? "animate-enquire" : ""
             }`}
-            ref={myRef2}
+            ref={myRef3}
           >
             {/* First Column - Image */}
             <div className="col-12 col-lg-6 hover-scale2 text-start mt-4 mb-3 ">
@@ -966,9 +984,9 @@ const settings = {
           {/* <div className="row "> */}
           <div
             className={`row shadow rounded-4 slide-in-left p-3 ${
-              hasViewedSlide.thirdElement ? "animate-slide-in" : ""
+              hasViewedSlide.fourthElement ? "animate-slide-in" : ""
             }`}
-            ref={myRef3}
+            ref={myRef4}
           >
             <div className="col-12 col-lg-6  m-auto ps-lg-3">
               <h1 className="text-center">
@@ -1077,9 +1095,9 @@ const settings = {
         <div className="container mt-5" id="entry">
           <div
             className={`row row shadow rounded-4 slide-in-left p-3 ${
-              hasViewedSlide.fourthElement ? "animate-enquire" : ""
+              hasViewedSlide.fifthElement ? "animate-enquire" : ""
             }`}
-            ref={myRef4}
+            ref={myRef5}
           >
             {/* First Column - Image */}
             <div className="col-12 col-lg-6 hover-scale2 mt-3 mb-3">
@@ -1178,9 +1196,9 @@ const settings = {
           {/* <div className="row "> */}
           <div
             className={`row shadow rounded-4 slide-in-left p-3  ${
-              hasViewedSlide.fifthElement ? "animate-slide-in" : ""
+              hasViewedSlide.sixthElement ? "animate-slide-in" : ""
             }`}
-            ref={myRef5}
+            ref={myRef6}
           >
             <div className="col-12 col-lg-6 rounded-3 mt-lg-3 ps-lg-3">
               <h1 className="text-center mt-lg-3">
@@ -1307,9 +1325,9 @@ const settings = {
         {/* <div className="container mt-5 border border-white" id="Testimonials"> */}
         <div
           className={` container mt-5 border border-white  rounded-4 slide-in-left   ${
-            hasViewedSlide.sixthElement ? "animate-enquire" : ""
+            hasViewedSlide.seventhElement ? "animate-enquire" : ""
           }`}
-          ref={myRef6}
+          ref={myRef7}
           id="Testimonials"
         >
           <div className="row border-primary ">
@@ -1324,15 +1342,15 @@ const settings = {
             className="m-0 p-0 col-12 col-md-8 col-lg-8 m-auto"
           >
             <div>
-              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-4 mt-0 ms-2 testimonialresponsive-div">
-                <h3 className="text-center mt-5">Sidonie la Fleur </h3>
+              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-4 mt-0 ms-1 me-1 testimonialresponsive-div">
+                <h3 className="text-center mt-5 ">Sidonie la Fleur </h3>
                 <p className=" mt-3 text-center">
                 I had the best educational experience from here and I can boast that I now Have WINGS to fly higher. I love y’all Ma’am Sheetal, Miss Tina and all the School Admins.
                 </p>
               </div>
             </div>
             <div>
-              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-2 mt-0 testimonialresponsive-div">
+              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-1 me-1 mt-0 testimonialresponsive-div">
                 <h3 className="text-center mt-5">Sushmita Bajracharya</h3>
                 <p className="mt-3 text-center">
                 It was an amazing experience, I’m grateful to be your student. I want to thank entire team of WingsWay Training Institute for the wonderful opportunities to learn and grow. Special thanks to ma'am sheetal and ma'am Tina. Thank you.
@@ -1340,15 +1358,15 @@ const settings = {
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 ms-2 mt-0 testimonialresponsive-div" >
-                <h3 className="text-center mt-5">Za</h3>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 ms-1 me-1 mt-0 testimonialresponsive-div" >
+                <h3 className="text-center mt-5 mt-lg-4 mt-xl-4 mt-xxl-4">Za</h3>
                 <p className="mt-3 text-center">
                 I had the privilege of learning from Ms. Sheetal, and it was an incredible experience. Her teaching style is engaging, clear, and interactive, making even the most complex topics easy to understand. She is always approachable and genuinely cares about students' success. Thanks to her dedication and expertise. Thanks to Ms. Fathima who provided valuable information about the Foundation in Travel and Tourism course and supported my admission process. Thank you WingsWay Team.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-2 mt-0 testimonialresponsive-div">
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-1 me-1 mt-0 testimonialresponsive-div">
                 <h3 className="text-center mt-5">Trenah Trevia</h3>
                 <p className="mt-3 text-center">
                 I am glad to be among the students in WingsWay Training Institute. The experience is overwhelming and have gained a lot of knowledge and team work.
@@ -1356,8 +1374,8 @@ const settings = {
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-2 mt-0 testimonialresponsive-div">
-                <h3 className="text-center mt-md-5 mt-lg-3 mt-4">
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-1 me-1 mt-0 testimonialresponsive-div">
+                <h3 className="text-center mt-md-5 mt-lg-5 mt-5">
                 Dilan Jason
                 </h3>
                 <p className="mt-3 text-center">
@@ -1367,8 +1385,8 @@ const settings = {
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-2 mt-0 testimonialresponsive-div">
-                <h3 className="text-center mt-md-5 mt-lg-3 mt-4">
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-1 me-1 mt-0 testimonialresponsive-div">
+                <h3 className="text-center mt-md-5 mt-lg-5 mt-5">
                 Sadia Nasir
                 </h3>
                 <p className="mt-3 text-center">
