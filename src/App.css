@@ -97,12 +97,17 @@
 } 
 
 .Contactbutton {
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  /* transition: all 0.3s ease-in-out;  */
+  color: white;
+  background-color: #0d278e !important;
+  border: 1px solid #0d278e !important;
 }
 
 button.Contactbutton:hover {
   background-color: white !important;
   color: #007dc0 !important;
+  border: 1px solid #007dc0 !important;
+
 }
 
 .Submitbutton {
@@ -199,12 +204,11 @@ html {
 }
 
 
-.Contactbutton {
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+/* .Contactbutton {
+  transition: all 0.3s ease-in-out; 
   color: white !important;
   background-color: #f46a2f !important;
   border: 1px solid #f46a2f !important;
-  /* padding: 20px !important; */
 
 }
 
@@ -212,7 +216,7 @@ button.Contactbutton:hover {
   background-color: white !important;
   color: #f46a2f !important;
   border: 1px solid #f46a2f
-}
+} */
 
 
 

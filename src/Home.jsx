@@ -366,7 +366,7 @@ const settings = {
                     style={{ fontSize: "60px", fontWeight: "700" }}
                   >
                     Launch Your
-                    <br />
+                 
                     Travel and Tourism Career
                   </h1>
                   <h4 className="text-white fw-light">
